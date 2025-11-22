@@ -1,4 +1,4 @@
-def lengthOfLongestSubstring(s) -> int:
+def lengthOfLongestSubstring(self, s) -> int:
     """
     :type s: str
     :rtype: int
