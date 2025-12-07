@@ -7,22 +7,20 @@ def lengthOfLongestSubstring(self, s) -> int:
     if not s:
         return 0
 
-    iterator = 0
     result = 0
+    left = 0
+    right = 0
+    letters_in_window = set()
 
-    while iterator < len(s):
+    while right != len(s):
 
-        box_for_letters = ""
+        while s[right] in letters_in_window:
+            letters_in_window.remove(s[left])
+            left += 1
 
-        for letter in s[iterator:]:
-
-            if letter in box_for_letters:
-                break
-            else:
-                box_for_letters += letter
-
-        result = max(result, len(box_for_letters))
-        iterator += 1
+        letters_in_window.add(s[right])
+        result = max(result, right - left + 1)
+        right += 1
 
     return result
 
