@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Tasks'))
 from Tasks.ChampagneTowerTask import champagneTower
 
 
-class GreatestSumDivisibleByThreeTests(unittest.TestCase):
+class ChampagneTowerTaskTests(unittest.TestCase):
 
     def test_first_case(self):
         poured = 1
@@ -36,5 +36,3 @@ class GreatestSumDivisibleByThreeTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-#ChampagneTowerTask
